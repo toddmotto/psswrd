@@ -22,23 +22,6 @@ Drop your files into your required folders, make sure you're using the file(s) f
 </body>
 ```
 
-## Scaffolding
-Project files and folder structure.
-
-```
-├── dist/
-│   ├── psswrd.js
-│   └── psswrd.min.js
-├── src/
-│   └── psswrd.js
-├── .editorconfig
-├── .gitignore
-├── .jshintrc
-├── .travis.yml
-├── Gruntfile.js
-└── package.json
-```
-
 ## Configuring Psswrd
 Psswrd self-initiates when you tell it to, it doesn't need calling like a regular plugin, it just watches for the `data-init-psswrd` attribute and will fire when ready. Configuring only takes a minute as it's been built with ease in mind.
 
@@ -85,11 +68,28 @@ The above uses the `<label>` element to provide a container for when the checkbo
 	<label>
 		Password:
 		<input type="password" data-psswrd-toggle>
-		<input type="checkbox" data-psswrd-checkbox>
+		<input type="checkbox" class="data-psswrd-checkbox" data-psswrd-checkbox>
 		<div class="data-psswrd-text" data-psswrd-text>Show password</div>
 	</label>
 	<button type="submit">Submit</button>
 </form>
+```
+
+## Scaffolding
+Project files and folder structure.
+
+```
+├── dist/
+│   ├── psswrd.js
+│   └── psswrd.min.js
+├── src/
+│   └── psswrd.js
+├── .editorconfig
+├── .gitignore
+├── .jshintrc
+├── .travis.yml
+├── Gruntfile.js
+└── package.json
 ```
 
 ## License
