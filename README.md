@@ -74,7 +74,7 @@ The structure of your form, however, is advised to be as follows to allow for op
 </form>
 ```
 
-The above uses the `&lt;label&gt;` element to provide a container for when the checkbox input and toggle text are appended inside. Psswrd takes care of the rest of things and your form will look like this:
+The above uses the `<label>` element to provide a container for when the checkbox input and toggle text are appended inside. Psswrd takes care of the rest of things and your form will look like this:
 
 ```html
 <form action="/" method="post" data-init-psswrd>
