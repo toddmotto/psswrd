@@ -61,7 +61,7 @@ That's it.
 The structure of your form, however, is advised to be as follows to allow for optimal styling and structure:
 
 ```html
-<form action="#" method="post" data-init-psswrd>
+<form action="/" method="post" data-init-psswrd>
 	<label>
 		Username:
 		<input type="text">
@@ -77,7 +77,7 @@ The structure of your form, however, is advised to be as follows to allow for op
 The above uses the `&lt;label&gt;` element to provide a container for when the checkbox input and toggle text are appended inside. Psswrd takes care of the rest of things and your form will look like this:
 
 ```html
-<form action="#" method="post" data-init-psswrd>
+<form action="/" method="post" data-init-psswrd>
 	<label>
 		Username:
 		<input type="text">
