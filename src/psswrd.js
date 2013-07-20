@@ -23,15 +23,18 @@ window.psswrd = ( function ( window, document, undefined ) {
     init : function () {
 
       var docFrag = document.createDocumentFragment();
+      var random = 'data-psswrd-id-' + [ Math.floor( Math.random() * 9999 ) ];
 
       var dataCheckbox = document.createElement( 'input' );
+      dataCheckbox.id = random;
       dataCheckbox.className = 'data-psswrd-checkbox';
       dataCheckbox.type = 'checkbox';
       dataCheckbox.setAttribute( 'data-psswrd-checkbox', '' );
 
-      var dataText = document.createElement( 'div' );
+      var dataText = document.createElement( 'label' );
       dataText.className = 'data-psswrd-text';
       dataText.setAttribute( 'data-psswrd-text', '' );
+      dataText.setAttribute( 'for', random );
       dataText.innerHTML = 'Show password';
 
       docFrag.appendChild( dataCheckbox );
@@ -54,7 +57,7 @@ window.psswrd = ( function ( window, document, undefined ) {
       var self = labelChildNodes[z];
       if ( ( self.nodeName.toLowerCase() === 'input' ) && ( self.hasAttribute( 'data-psswrd-toggle' ) ) ) {
         self.type = this.checked ? 'text' : 'password';
-      } else if ( ( self.nodeName.toLowerCase() === 'div' ) && ( self.hasAttribute( 'data-psswrd-text' ) )) {
+      } else if ( ( self.nodeName.toLowerCase() === 'label' ) && ( self.hasAttribute( 'data-psswrd-text' ) )) {
         self.innerHTML = this.checked ? 'Hide password' : 'Show password';
       }
     }
