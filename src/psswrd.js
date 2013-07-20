@@ -32,9 +32,9 @@ window.psswrd = ( function ( window, document, undefined ) {
       dataCheckbox.setAttribute( 'data-psswrd-checkbox', '' );
 
       var dataText = document.createElement( 'label' );
+      dataText.setAttribute( 'for', random );
       dataText.className = 'data-psswrd-text';
       dataText.setAttribute( 'data-psswrd-text', '' );
-      dataText.setAttribute( 'for', random );
       dataText.innerHTML = 'Show password';
 
       docFrag.appendChild( dataCheckbox );
