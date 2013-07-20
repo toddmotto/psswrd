@@ -25,6 +25,7 @@ window.psswrd = ( function ( window, document, undefined ) {
       var docFrag = document.createDocumentFragment();
 
       var dataCheckbox = document.createElement( 'input' );
+      dataCheckbox.className = 'data-psswrd-checkbox';
       dataCheckbox.type = 'checkbox';
       dataCheckbox.setAttribute( 'data-psswrd-checkbox', '' );
 
@@ -70,7 +71,7 @@ window.psswrd = ( function ( window, document, undefined ) {
   }
 
   /*
-   * Bind onchange events to the inputs
+   * Bind onchange events to the checkboxes
    */
   var dataCheckbox = document.querySelectorAll( '[data-psswrd-checkbox]' );
   for ( var j = 0; j < dataCheckbox.length; j++ ) {
